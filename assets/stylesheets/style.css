@@ -1,0 +1,129 @@
+body {
+    padding:0px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+}
+  /**********Post Grid ******************/
+  .navbar {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+  .navlinks {
+      display: flex;
+      align-items: flex-start;
+  }
+  .navlinks li {
+      line-height: 40px;  
+      list-style: none;
+      margin-right: 20px;
+      cursor: pointer;
+      position: relative;
+  }
+  .navlinks li:after{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height:3px;
+      background: black;
+      width: 0;
+      left: 0;
+      bottom: 0;
+      transition: all ease-in 0.3s  ;
+      -webkit-transition: all ease-in 0.3s  ;
+      -moz-transition: all ease-in 0.3s  ;
+      -ms-transition: all ease-in 0.3s  ;
+      -o-transition: all ease-in 0.3s  ;
+}
+  .navlinks li:hover:after{
+      width: 100%;
+  }
+  .container .item {
+      width: 400px;
+      background-color: white;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: all 0.5s ease-in;
+      box-shadow: 0 0 5px 0px black;
+  }
+  .container .item:hover {
+      box-shadow: 0 0 10px 0px black;
+      transform: translate(0px, 10px)  ;
+      -webkit-transform: translate(0px, 10px)  ;
+      -moz-transform: translate(0px, 10px)  ;
+      -ms-transform: translate(0px, 10px)  ;
+      -o-transform: translate(0px, 10px)  ;
+}
+.container .item:hover  .postLink:after {
+    opacity: 1;
+    right:-65px;
+}
+  .postThumbnail {
+      height: auto;
+      width: 100%;
+  }
+  .postContent {
+      padding: 20px;
+  }
+  .postTitle {
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.5px;
+      font-size: 35px;
+      line-height: 110%;
+      margin: 5px auto;
+      font-family: 'Oswald', sans-serif;
+  }
+  .postTime {
+      font-size: 15px;
+      margin-left: 15px;
+      line-height: 20px;
+  }
+  .postTime time, .postAuthor {
+      font-weight: 600;
+      font-size: 18px;
+  }
+  .postExcerpt {
+      font-size: 20px;
+      margin-top: 5px;
+      text-align: left;
+  }
+  .linkContainer {
+      color: white;
+      background-color: black;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+  }
+  .postLink {
+      color: white;
+      font-weight: 600;
+      line-height: 40px;
+      font-size: 25px;
+      position: relative;
+      cursor: pointer;
+  }
+  .postLink:after {
+    content: '\2192';
+    position: absolute;
+    opacity: 0;  
+    font-size: 65px;
+    line-height: 25px;
+    font-weight: 600;
+    top: -10px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .postLink:hover {
+      color: grey;
+  }
+  .postLink:hover:after {
+      opacity: 1;
+      right:-60px;
+  }
+  
+  
